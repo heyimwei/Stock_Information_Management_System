@@ -1,9 +1,9 @@
 <?php
 
-    define('DB_SERVER', "140.122.184.129:3310");
-    define('DB_USERNAME', 'team12');
-    define('DB_PASSWORD', 'SM(tFcLC*Ma0(N(E');
-    define('DB_DATABASE', 'team12');
+    define('DB_SERVER', "SERVER");
+    define('DB_USERNAME', 'USERNAME');
+    define('DB_PASSWORD', 'PASSWORD');
+    define('DB_DATABASE', 'DATABASE');
 
     $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
