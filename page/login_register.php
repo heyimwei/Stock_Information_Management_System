@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'config.php';
+require 'page/config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userID = $_POST['userID'];

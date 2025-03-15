@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php session_start(); ?>
-<?php require 'config.php'; ?>
+<?php require 'page/config.php'; ?>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -18,7 +18,7 @@
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
             <!-- Navigation-->
-            <?php require 'navigation.php'; ?>
+            <?php require 'page/navigation.php'; ?>
             <!-- Header-->
             <header class="bg-dark py-5">
                 <div class="container px-5">

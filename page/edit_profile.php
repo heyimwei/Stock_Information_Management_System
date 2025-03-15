@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'config.php';
+require 'page/config.php';
 
 // 檢查用戶是否登入
 if (!isset($_SESSION['loggedin']) || !$_SESSION['loggedin']) {

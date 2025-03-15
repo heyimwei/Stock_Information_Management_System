@@ -17,7 +17,7 @@
 <body class="d-flex flex-column">
     <main class="flex-shrink-0">
         <!-- Navigation-->
-        <?php require 'navigation.php'; ?>
+        <?php require 'page/navigation.php'; ?>
         <!-- Page Content-->
         <section class="py-5">
             <div class="container px-5 my-5">
@@ -47,13 +47,13 @@
                                             </div>
                                             <div class="ms-3">
                                             <li>
-                                            <a href="company_intro.php?CompanyID=<?php echo urlencode($company['CompanyID']); ?>&CompanyName=<?php echo urlencode($company['CompanyName']); ?>&Industry=<?php echo urlencode($company['Industry']); ?>" style="color: black; text-decoration: none;">
+                                            <a href="page/company_intro.php?CompanyID=<?php echo urlencode($company['CompanyID']); ?>&CompanyName=<?php echo urlencode($company['CompanyName']); ?>&Industry=<?php echo urlencode($company['Industry']); ?>" style="color: black; text-decoration: none;">
                                                 公司名稱: <?php echo htmlspecialchars($company['CompanyName']); ?>
                                             </a>
-                                            <a href="company_intro.php?CompanyID=<?php echo urlencode($company['CompanyID']); ?>&CompanyName=<?php echo urlencode($company['CompanyName']); ?>&Industry=<?php echo urlencode($company['Industry']); ?>" style="color: black; text-decoration: none;"> 
+                                            <a href="page/company_intro.php?CompanyID=<?php echo urlencode($company['CompanyID']); ?>&CompanyName=<?php echo urlencode($company['CompanyName']); ?>&Industry=<?php echo urlencode($company['Industry']); ?>" style="color: black; text-decoration: none;"> 
                                                     公司ID: <?php echo htmlspecialchars($company['CompanyID']); ?>
                                                 </a>
-                                                <a href="company_intro.php?CompanyID=<?php echo urlencode($company['CompanyID']); ?>&CompanyName=<?php echo urlencode($company['CompanyName']); ?>&Industry=<?php echo urlencode($company['Industry']); ?>" style="color: black; text-decoration: none;">
+                                                <a href="page/company_intro.php?CompanyID=<?php echo urlencode($company['CompanyID']); ?>&CompanyName=<?php echo urlencode($company['CompanyName']); ?>&Industry=<?php echo urlencode($company['Industry']); ?>" style="color: black; text-decoration: none;">
                                                     行業: <?php echo htmlspecialchars($company['Industry']); ?>
                                                 </a>
                                                 <button type="button" class="btn btn-danger btn-sm ms-2" onclick="deleteCompany('<?php echo htmlspecialchars($company['CompanyID']); ?>')">
@@ -102,7 +102,7 @@ function deleteCompany(companyID) {
     if (confirm('確定要刪除這個公司嗎？')) {
         // 使用 AJAX 發送刪除請求
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "delete_company.php", true);
+        xhr.open("POST", "page/delete_company.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {

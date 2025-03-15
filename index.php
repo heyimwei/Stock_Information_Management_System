@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php session_start(); ?>
-<?php require 'config.php'; ?>
+<?php require 'page/config.php'; ?>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -18,7 +18,7 @@
 <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
         <!-- Navigation-->
-        <?php require 'navigation.php'; ?>
+        <?php require 'page/navigation.php'; ?>
         <!-- Header-->
         <header class="bg-dark py-5">
             <div class="container px-5">
@@ -62,7 +62,7 @@
                                     $conn->close();
                                     ?>
                                     <?php if(isset($_SESSION['permission']) && $_SESSION['permission']): ?>
-                                        <a class="stretched-link text-decoration-none" href="edit_anouncement.php">
+                                        <a class="stretched-link text-decoration-none" href="page/edit_anouncement.php">
                                             修改
                                             <i class="bi bi-arrow-right"></i>
                                         </a>
@@ -83,14 +83,14 @@
                     <div class="col-lg-8">
                         <div class="row gx-5 row-cols-1 row-cols-md-2">
                             <div class="col mb-5 h-100">
-                                <a class="navbar-brand" href="search.php" >
+                                <a class="navbar-brand" href="page/search.php" >
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-search"></i></div>
                                     <h2 class="fw-bolder mb-0">搜尋股票</h2>
                                     <p class="mb-0">使用我們的系統快速找尋到您想要股票資料</p>
                                 </a>
                             </div>
                             <div class="col mb-5 h-100">
-                                <a class="navbar-brand" href="follow_company.php" >
+                                <a class="navbar-brand" href="page/follow_company.php" >
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
                                     <h2 class="fw-bolder mb-0">個人追蹤清單</h2>
                                     <p class="mb-0">使用我們的系統關注您追蹤的股票</p>
@@ -107,7 +107,7 @@
                             <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
-                                        <form action="edit_profile.php" method="post">
+                                        <form action="page/edit_profile.php" method="post">
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="editProfileModalLabel">修改個人資料</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -153,7 +153,7 @@
                             <div class="modal fade" id="uploadCompanyModal" tabindex="-1" aria-labelledby="uploadCompanyModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
-                                        <form action="upload_company.php" method="post">
+                                        <form action="page/upload_company.php" method="post">
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="uploadCompanyModalLabel">上傳公司資料</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
