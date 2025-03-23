@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-// ******** 更新你的個人設置 ******** 
-$servername = "140.122.184.129:3310";
-$username = "team12";
-$password = "SM(tFcLC*Ma0(N(E";
-$dbname = "team12";
+// ******** 更新你的個人設置 ********
+$servername = "SERVER";
+$username = "USERNAME";
+$password = "PASSWORD";
+$dbname = "DATABASE";
 
 // 顯示錯誤訊息
 error_reporting(E_ALL);
