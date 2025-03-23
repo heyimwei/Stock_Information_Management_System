@@ -1,5 +1,5 @@
 <?php
-require 'page/config.php';
+require 'config.php';
 
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

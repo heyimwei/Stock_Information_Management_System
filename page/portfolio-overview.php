@@ -16,7 +16,7 @@
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
             <!-- Navigation-->
-            <?php require 'page/navigation.php'; ?>
+            <?php require 'navigation.php'; ?>
             <!-- Page Content-->
             <section class="py-5">
                 <div class="container px-5 my-5">

@@ -1,5 +1,5 @@
 <?php
-require 'page/config.php';
+require 'config.php';
 
 session_start();
 
@@ -38,5 +38,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['companyID'])) {
 }
 
 $conn->close();
-header('Location: page/follow_company.php');
+header('Location: follow_company.php');
 ?>

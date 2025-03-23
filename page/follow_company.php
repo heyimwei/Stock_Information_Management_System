@@ -1,5 +1,5 @@
 <?php
-require 'page/config.php';
+require 'config.php';
 
 session_start();
 
@@ -52,5 +52,5 @@ if (isset($_SESSION['userID'])) {
 }
 
 $conn->close();
-header('Location: page/company_list.php');
+header('Location: company_list.php');
 ?>

@@ -5,7 +5,7 @@ if (!isset($_SESSION['loggedin']) || !$_SESSION['loggedin'] || !isset($_SESSION[
     die("Access denied");
 }
 
-require 'page/config.php';
+require 'config.php';
 
 $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 if ($conn->connect_error) {
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_param("s", $new_content);
 
     if ($stmt->execute()) {
-        header("Location: index.php"); // 重定向到主頁面
+        header("Location: ../index.php"); // 重定向到主頁面
         exit();
     } else {
         echo "Error: " . $stmt->error;

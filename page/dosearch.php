@@ -1,5 +1,5 @@
 <?php
-require 'page/config.php';
+require 'config.php';
 
 // Get the POST data
 $postData = file_get_contents("php://input");

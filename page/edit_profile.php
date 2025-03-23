@@ -1,13 +1,13 @@
 <?php
 session_start();
-require 'page/config.php';
+require 'config.php';
 
 // 檢查用戶是否登入
 if (!isset($_SESSION['loggedin']) || !$_SESSION['loggedin']) {
     echo "更改無效！請先登入~ 3秒後自動回到主頁";
     echo "<script>
         setTimeout(function() {
-            window.location.href = 'index.php';
+            window.location.href = '../index.php';
         }, 3000);
         </script>";
     exit;
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               </div>";
         echo "<script>
                 setTimeout(function() {
-                    window.location.href = 'index.php';
+                    window.location.href = '../index.php';
                 }, 3000);
               </script>";
     } else {
